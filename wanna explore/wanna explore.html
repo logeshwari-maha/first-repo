@@ -1,0 +1,363 @@
+<html>
+    <head>
+        <style>
+            #sidebar {
+                  position: fixed;
+                  min-width: 280px;
+                   top: 0px;
+                    left: 0px;
+                    width: 300px;
+                     height: 100%;
+                     border-right: solid;
+                   border-color: rgba(0, 22, 22, 0.4);
+            }
+             #sidebar ul {
+                   height: 88%;
+                    padding: 0;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+            }
+            #sidebar li {
+                  border-top: 1px solid;
+                  list-style: none;
+                   position: relative;
+                  width: 100%;
+            }
+            .home{
+                display: flex;
+                   flex-flow: row wrap;
+                   width: 100%;
+                   height: 90px;
+                    background-color: #fff;
+                    box-shadow: 4px 4px 12px plum;
+                    align-items: center;
+                    justify-content: center;
+                    position: sticky;
+                    top: 0;
+                    z-index: 1;
+                
+
+            }
+            .logo{
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: xx-large;
+                flex-wrap: row;
+                padding: 40px;
+                font-style:italic;
+                font-weight:100;
+                text-shadow: 4px plum; 
+                color:rgb(244, 11, 244); 
+        
+            }
+            ul.menu {
+                flex: 1;
+                display: flex;
+                flex-flow: row wrap;
+             }
+            .menu li {
+                flex: 1;
+                list-style-type: none;
+                font-size: 14px;
+                font-family: "Barlow Condensed";
+                text-align: center;
+            }
+
+             .menu li a {
+                text-decoration: none;
+                color: #000;
+                text-transform: uppercase;
+             }
+             .menu li a:hover {
+                color:mediumorchid;
+                text-decoration: underline;
+            }
+            .page{
+                background-image: url("WhatsApp\ Image\ 2023-08-03\ at\ 08.55.11.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 100%;
+                height: 100vh;
+                text-align: center;
+                position: relative;
+                display: flex;
+                justify-content:space-around;
+                font-size:18px;
+                text-shadow: 4px;
+                color:rgb(236, 80, 216);
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-stretch: ultra-expanded;
+            }
+            .places-text h2 {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: xx-large;
+                flex-wrap: row;
+                padding: 40px;
+                font-style:italic;
+                font-weight:100;
+                text-shadow: 4px plum; 
+                color:rgb(244, 11, 244); 
+        
+            }
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-gap: 30px;
+                align-items: center;
+                justify-items: center;
+                text-align: center;
+             }
+            .card {
+                border: 1px solid lightgray;
+                box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                width: 80%;
+                height: auto;
+             }
+             .card img {
+                max-width: 100%;
+                height: 300px;
+                border-radius: 8px;
+                cursor: pointer;
+             }
+             .cards .text {
+                padding: 20px;
+                font-family: Barlow Condensed;
+                line-height: 50px;
+            }
+            .cards .card-box {
+                display: flex;
+                flex-flow: row;
+                background-color:plum;
+                font-size: 18px;
+                font-family: Roboto;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            .cards .time {
+                flex: 1;
+             }
+            .cards .location {
+                flex: 2;
+             }
+            .cards .cost {
+                color: #4cafad;
+                font-size: 20px;
+            }
+            .zoom-img {
+                float: left;
+                position: relative;
+                width: 100%;
+                height: 320px;
+                overflow: hidden; 
+            }
+            .zoom-img .img-card {
+                position: absolute;
+                overflow: hidden;
+            }
+            .img-card img {
+                -webkit-transition: 0.8s ease;
+                transition: 0.8s ease;
+            }
+            .card:hover .zoom-img img {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+            .about2{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size:20;
+                flex-wrap: row;
+                padding: 40px;
+                font-style:italic;
+                font-weight:100;
+                text-shadow: 4px plum; 
+                color:rgb(244, 11, 244); 
+        
+
+            }
+            .about3{
+                flex-wrap: row;
+                flex: 2;
+                text-align: center;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                font-weight: 100px;
+                text-overflow: ellipsis;
+                color:#000;
+                text-shadow: 10px  rgb(249, 7, 249);
+                font-stretch: extra-expanded;
+
+            }
+            .contact-22{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                flex-wrap: row;
+                padding: 40px;
+                font-style:italic;
+                font-weight:100;
+                text-shadow: 4px plum; 
+                color:rgb(244, 11, 244); 
+        
+
+            }
+            .contact-33{
+                flex-wrap: row;
+                flex: 2;
+                text-align: center;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                font-weight: 100px;
+                text-overflow: ellipsis;
+                color:#000;
+                text-shadow: 10px  rgb(249, 7, 249);
+                font-stretch: extra-expanded;
+    
+            }
+         </style>
+  
+    </head>
+    <body>
+         <nav class="sidebar">
+        <selection class="home">
+        <div class="logo">Wanna Explore</div>
+        <ul class="menu">
+            <li><a class="nav-itme" href="#home">home</a></li>
+            <li><a class="nav-item" href="#package">package</a></li>
+            <li><a class="nav-item" href="#About us">About us</a></li>
+            <li><a class="nav-item" href="#Contact us">Contact us</a></li>
+        </ul>
+        </div>
+        </nav>
+        <div class="page">
+            <h1>Adventure is worthwhile</h1>
+        </div>
+        </selection>
+        <section class="package">
+            <div class="places-text">
+                <h2>PACKAGE</h2>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img
+                                src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293736/james-wheeler_xqmq2y.jpg">
+                </div>
+            </div>
+                <div class="text">
+                <h2>The Dark Forest Adventure</h2>
+                <p class="cost">$1870 / Per Person</p>
+                <div class="card-box">
+                <p class="time">3 Days</p>
+                <p class="location">Vancouver, Canada</p>
+            </div>
+            </div>
+        </div>
+                 <div class="card">
+                 <div class="zoom-img">
+                <div class="img-card">
+                <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293755/paris_uj8wum.jpg">
+              </div>
+        </div>
+                <div class="text">
+                <h2>The Dark Forest Adventure</h2>
+                <p class="cost">$1870 / Per Person</p>
+                <div class="card-box">
+                <p cass="time"> 3 Days</p>
+                <p class="location">Paris, France</p>
+               </div>
+            </div>
+        </div>
+                <div class="card">
+                <div class="zoom-img">
+                <div class="img-card">
+                <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293955/monaco_usu7xb.jpg">
+              </div>
+        </div>
+                <div class="text">
+                <h2>The Dark Forest Adventure</h2>
+                <p class="cost">$1870 / Per Person</p>
+                <div class="card-box">
+                <p class="time"> 3 Days</p>
+                <p class="location"> Monaco, Monaco</p>
+            </div>
+        </div>
+    </div>
+                <div class="card">
+                <div class="zoom-img">
+                <div class="img-card">
+               <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293874/switzerland_tubxcm.jpg">
+        </div>
+         </div>
+         
+                <div class="text">
+                 <h2>The Dark Forest Adventure</h2>
+                  <p class="cost">$1870 / Per Person</p>
+                 <div class="card-box">
+                 <p class="time"> 3 Days</p>
+                <p class="location">Bern, Switzerland</p>
+               </div>
+            </div>
+         </div>
+                <div class="card">
+                <div class="zoom-img">
+                 <div class="img-card">
+                <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293673/korea_bxrcj5.jpg">
+             </div>
+            </div>
+                <div class="text">
+                 <h2>The Dark Forest Adventure</h2>
+                 <p class="cost">$1870 / Per Person</p>
+                 <div class="card-box">
+                 <p class="time">3 Days</p>
+                 <p class="location"> Seoul, South Korea</p>
+               </div>
+               </div>
+            </div>
+                 <div class="card">
+                <div class="zoom-img">
+                <div class="img-card">
+                <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293673/night-4336403_1920_demehp.jpg">
+              </div>
+         </div>
+                 <div class="text">
+                 <h2>The Dark Forest Adventure</h2>
+                <p class="cost">$1870 / Per Person</p>
+                 <div class="card-box">
+                <p class="time">3 Days</p>
+                 <p class="location">Tokyo, japan</p>
+                </div>
+              </div>
+         </div>
+      </div>
+     </section> 
+     <selection class="About us">
+        <div class="about2">
+            <h1>ABOUT US</h1>
+            </div>
+        <div class="about3">
+        <h3>2000+ Visiting places</h3>
+        <h3>1000+Adventure places</h3>
+        <h3>2m Reviews</h3>
+         <h3>we Give a best and Better travel Experience</h3>
+         <h3>We provide the Best Adventure experience to you</h3>
+         </div>
+     </selection>
+     <selection class="Contact us">
+        <div class="contact-22">
+            <h1>CONTACT US</h1>
+        </div>
+        <div class="contact-33">
+        <h3>www.Wannaexplore@gmail.com</h3>
+        <h3>wannaexplore//website</h3>
+        <h3>Wanna_explore_//instagram</h3>
+        <h3>9876543210</h3>
+        <h3>chennai//Adresss</h3>
+        </div>    
+     </selection>
+     </body>
+     </html>
